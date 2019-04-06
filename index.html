@@ -24,19 +24,36 @@
 
     <button id="startGame">START GAME</button>
 
-    <div class="questions">
-        <span id="q1">What is color means stop?
+    <form class="questions">
+        <span id="q1">Red means stop.
         </span><br>
-        <span id="q2">What is color means go?
-        </span><br>
-        <span id="q3">What is color means caution?
-        </span><br>
+        <input type="radio" name="colors" id="red">True<br>
+        <input type="radio" name="colors" id="red">False<br>
 
-    </div>
+        <!-- <button onclick="uncheck()"> "True"</button> -->
+<button onclick="uncheck()">Uncheck </button><br>
+
+           <span id="q2">Orange means go.
+        </span><br>
+        <input type="radio" name="colors" id="red">True<br>
+        <input type="radio" name="colors" id="red">False<br>
+
+        <!-- <button onclick="check()">Check "True"</button> -->
+<button onclick="uncheck()">Uncheck </button><br>
+
+        <span id="q3">Yellow means caution.
+        </span><br>
+        <input type="radio" name="colors" id="red">True<br>
+        <input type="radio" name="colors" id="red">False<br>
+
+        <!-- <button onclick="check()">Check "True"</button> -->
+<button onclick="uncheck()">Uncheck</button><br>
+
+
+    </form>
 
     <script>
         let arrAnswers = ["red", "green", "yellow"]
-
 
 
 
