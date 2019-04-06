@@ -24,7 +24,8 @@
 
     <button id="startGame">START GAME</button>
 
-    <form class="questions">
+    <div class="questions">
+        <span id="timeLeft">Clock:</span><br>
         <span id="q1">Red means stop.
         </span><br>
         <input type="radio" name="colors" id="red">True<br>
@@ -50,31 +51,33 @@
 <button onclick="uncheck()">Uncheck</button><br>
 
 
-    </form>
+    </div>
 
     <script>
-        let arrAnswers = ["red", "green", "yellow"]
+        // let arrQuestion = ["Red means stop.", "Orange means go.", "Yellow means caution."]
+        // let arrAnswers = ["True","False",]
+
+            // for(i=0, i<arrQuestion.length;i++){
+            //     document.write()
+            // }
 
 
+function countDown (secs,ele){
+
+let element = document.getElementById(ele);
+element.innerHTML="You Have" + secs +" seconds";
+secs--;
+let timer= setTimeout('countDown('+secs+',"'+ele+'")',1000);
+ if(secs<1){
+     clearTimeout(timer);
+     element.innerHTML='<h2> Game Over!!!</h2>';
+     
+ }   
 
 
-
-
-        function countDown(sec, clock) {
-            let clock = document.getElementById(clock);
-            clock.innerHTML = "You Have only" + sec + "seconds";
-
-        }
-
-
-
-
-
-
-
-
-
-
+}
+ 
+                
 
 
 
@@ -83,7 +86,7 @@
 
     </script>
     <script type="text/javascript" src="triviagames.js"></script>
-    <script>countDown(10, startGame)</script>
+    <script>countDown(10, "timeLeft")</script>
 </body>
 
 </html>
